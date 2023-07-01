@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\finns\OneDrive\Desktop\pr\practical-\practical\main.c(60,17): warning C4098: func1: функция типа "void", возвращающая значение
+C:\Users\finns\OneDrive\Desktop\pr\practical-\practical\main.c(63,17): warning C4098: func2: функция типа "void", возвращающая значение
+C:\Users\finns\OneDrive\Desktop\pr\practical-\practical\main.c(58): warning C4715: show_menu: значение возвращается не при всех путях выполнения
+main.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+  practical.vcxproj -> C:\Users\finns\OneDrive\Desktop\pr\practical-\practical\Debug\practical.exe
