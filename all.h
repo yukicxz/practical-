@@ -8,6 +8,7 @@
 #include <string.h>
 #include <windows.h>
 
+int zastavka();
 int show_menu();
 void func1();
 void func2();
