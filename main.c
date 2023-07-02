@@ -2,7 +2,7 @@
 #include "all.h"
 int main()
 {
-    //zastavka();
+    zastavka();
     show_menu();
     return 0;
 }

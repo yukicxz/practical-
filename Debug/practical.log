@@ -1,5 +1,5 @@
-﻿  main.c
-C:\Users\Aleksandra\Desktop\практика\прога\practical-\main.c(97,11): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\Aleksandra\Desktop\практика\прога\practical-\main.c(94): warning C4715: show_menu: значение возвращается не при всех путях выполнения
+﻿  sort.c
+D:\ж\летняя практика\sort.c(25): warning C4715: sizee: значение возвращается не при всех путях выполнения
+D:\ж\летняя практика\sort.c(157): warning C4715: show_menu: значение возвращается не при всех путях выполнения
 main.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
-  practical.vcxproj -> C:\Users\Aleksandra\Desktop\практика\прога\practical-\Debug\practical.exe
+  practical.vcxproj -> D:\ж\летняя практика\Debug\practical.exe

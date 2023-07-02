@@ -6,7 +6,7 @@ int sizee() {
     char vibor = ' ';
     system("cls");
     printf("\033[93m""Текущая размерность массива: %d""\033[m", size);
-    printf("\033[33m""\nХотите поменять имя? (Y/N): ""\033[m");
+    printf("\033[33m""\nХотите поменять? (Y/N): ""\033[m");
     getchar();
     scanf("%c", &vibor);
     vibor = toupper(vibor);
@@ -27,31 +27,30 @@ int sizee() {
 void mergeSortFunction(int size) {
     setlocale(LC_ALL, "Russian");
     int* a = (int*)malloc(size * sizeof(int));//выделение памяти под динамический массив
+    FILE* nesort;
+    FILE* sort;
     if (a == NULL) {//вывод ошибки в случае, если память не была выделена
         printf("Ошибка выделения памяти");
         return;
     }
-    // Заполняем элементы массива случайными числами
+    nesort = fopen("nesort.txt", "w");//открываем файл для несортированного массива
+    // Заполняем элементы массива случайными числами и записываем в файл
     for (int i = 0; i < size; i++) {
-        a[i] = rand() % 100;
-        printf(" %d ", a[i]);
+        a[i] = rand() % 10000;
+        fprintf(nesort, " %d", a[i]);
     }
-
+    fclose(nesort);//закрываем файл
+    time_t start = clock();//время до сортировки
     mergeSort(a, 0, size - 1);// вызываем функцию сортировки
-    // Выводим отсортированный массив
-    printf("\n");
-
+    time_t stop = clock();//время после сортировки
+    double time = (stop - start) / 1000.0;//время сортировки
+    sort = fopen("sort.txt", "w");//открываем файл для сортированного массива
+    // Записываем отсортированный массив в файл
     for (int i = 0; i < size; i++)
-        printf(" %d ", a[i]);
-
+        fprintf( sort, " %d", a[i]);
     free(a);
-    show_menu();
-}
-void func1() {
-
-    printf("Введите размер массива больше одного: ");
-    scanf("%d", &size);//считывание размера массива
-    mergeSortFunction(size);
+    fclose(sort);//закрываем файл
+    printf("Массив успешно отсортирован\nВремя сортировки:%5.3lf секунд", time);
     show_menu();
 }
 void mergeSort(int* a, int l, int r) {

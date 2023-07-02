@@ -133,6 +133,8 @@
     <ClCompile Include="main.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
     </ClCompile>
+    <ClCompile Include="sort.c" />
+    <ClCompile Include="zastavka.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="all.h" />

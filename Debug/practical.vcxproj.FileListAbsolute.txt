@@ -1,2 +1,3 @@
 C:\Users\finns\OneDrive\Desktop\pr\practical-\practical\Debug\practical.exe
 C:\Users\Aleksandra\Desktop\практика\прога\practical-\Debug\practical.exe
+D:\ж\летняя практика\Debug\practical.exe
