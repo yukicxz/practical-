@@ -2,7 +2,7 @@
 #include "all.h"
 int main()
 {
-    zastavka();
-    show_menu();
+    zastavka(); //запуск функции заставки
+    show_menu(); //запуск функции меню
     return 0;
 }

@@ -1,26 +1,26 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "all.h"
-void mergeSort(int* a, int l, int r);
+
 int size = 0; // инициализируем размер массива нулем
 int sizee() {
     char vibor = ' ';
-    system("cls");
-    printf("\033[93m""Текущая размерность массива: %d""\033[m", size);
+    system("cls"); //очистка консоли
+    printf("\033[93m""Текущая размерность массива: %d""\033[m", size); 
     printf("\033[33m""\nХотите поменять? (Y/N): ""\033[m");
-    getchar();
-    scanf("%c", &vibor);
-    vibor = toupper(vibor);
-    if (vibor == 'Y')
+    getchar(); //задержка 
+    scanf("%c", &vibor); //считывание в переменную
+    vibor = toupper(vibor); //определение заглавных и строчных букв
+    if (vibor == 'Y') //если выбор да
     {
         printf("Введите размер массива больше одного: ");
-        scanf("%d", &size);
+        scanf("%d", &size); //запись размера массива
         printf("Размер массива успешно введен\n");
-        return show_menu();
+        return show_menu(); //возврат в меню
     }
-    else if (vibor == 'N')
+    else if (vibor == 'N') //если выбор нет
     {
-        system("cls");
-        return show_menu();
+        system("cls"); //очистка консоли 
+        return show_menu(); //возврат в меню
     }
 }
 
@@ -121,27 +121,27 @@ int show_menu() { //объявление меню
     char choice; //переменная для выбора
 
     printf("Ваш выбор: ");
-    scanf(" %c", &choice);
+    scanf(" %c", &choice); // запись выбора в переменную
     printf("\n");
 
     switch (choice) { //переключатель для выбора пользователя
     case '1': //если пользователь ввел 1
         system("cls"); //очистка конслоли
-        if (size <= 0) {
+        if (size <= 0) { //если размер массива не задан
             printf("Размер массива не был введен\n");
-            return show_menu();
+            return show_menu(); //возврат в меню
         }
         else {
-            mergeSortFunction(size);
-            return show_menu();
+            mergeSortFunction(size); //функция сортировки
+            return show_menu(); //возврат в меню
         }
         break;
     case '2': //если пользователь ввел 2
         system("cls"); //очистка конслоли
-        sizee();
+        sizee(); //функция ввода размера массива
         break;
     case '3': //если пользователь ввел 3
-        exit(0);
+        exit(0); //выход
         break;
 
     default: //если не выбран ни один из предложенных вариантов

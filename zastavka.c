@@ -2,14 +2,14 @@
 #include "all.h"
 int zastavka()
 {
-    system("cls");
-    setlocale(LC_ALL, "Rus");
-    char title[] = "  Сортировка слиянием\n";
-    char title2[] = "Выполнили Корнилов В.М Самофалова А.В. Перкин П.О\n";
-    char title3[] = "     Группа 22ВВП2 ";
-    int length = strlen(title);
-    int length2 = strlen(title2);
-    int length3 = strlen(title3);
+    system("cls"); //очистка консоли
+    setlocale(LC_ALL, "Rus"); //установка русского языка
+    char title[] = "  Сортировка слиянием\n"; //
+    char title2[] = "Выполнили Корнилов В.М Самофалова А.В. Перкин П.О\n"; //объявление текстовых массивов
+    char title3[] = "     Группа 22ВВП2 "; //
+    int length = strlen(title); //
+    int length2 = strlen(title2); //Определение длинны массивов
+    int length3 = strlen(title3); //
     int x, y;
 
     CONSOLE_SCREEN_BUFFER_INFO csbi;
